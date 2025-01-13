@@ -93,7 +93,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: 'https://api.ftmscan.com/api',
           browserURL: 'https://ftmscan.com',
-          accounts: [],
+          accounts: [`${String(process.env.DEPLOYER)}`],
         },
       },
 
@@ -103,7 +103,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: 'https://api-amoy.polygonscan.com/api',
           browserURL: 'https://amoy.polygonscan.com/',
-          accounts: []
+          accounts: [`${String(process.env.DEPLOYER)}`]
         },
       },
       {
@@ -112,7 +112,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api.polygonscan.com/api",
           browserURL: "https://polygonscan.com",
-          accounts: []
+          accounts: [`${String(process.env.DEPLOYER)}`]
           
         },
       },
@@ -122,7 +122,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api.bscscan.com/api",
           browserURL: "https://bscscan.com",
-          accounts: []
+          accounts: [`${String(process.env.DEPLOYER)}`]
 
         },
       },
@@ -132,7 +132,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://testnet-api.lif3scout.com/api",
           browserURL: "https://testnet.lif3scout.com",
-          accounts: []
+          accounts: [`${String(process.env.DEPLOYER)}`]
 
         },
       },
@@ -142,7 +142,7 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://lif3scout.com/api",
           browserURL: "https://lif3scout.com",
-          accounts: []
+          accounts: [`${String(process.env.DEPLOYER)}`]
 
         },
       },
