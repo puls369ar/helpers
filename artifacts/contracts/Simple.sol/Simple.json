@@ -1,0 +1,31 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Simple",
+  "sourceName": "contracts/Simple.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint128",
+          "name": "age",
+          "type": "uint128"
+        }
+      ],
+      "name": "Hello",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "sayHello",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060998061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ef5fb05b14602d575b600080fd5b60336035565b005b604051601c907fb1f457dd35dd581314b8d663b67d6d4cb65bcb4fcf03a124d08c2d97bea4066f90600090a256fea26469706673582212209736ced03e22d9e72beb9e77b796de2a2452818318365d042d70c3ed3c35735764736f6c63430008140033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ef5fb05b14602d575b600080fd5b60336035565b005b604051601c907fb1f457dd35dd581314b8d663b67d6d4cb65bcb4fcf03a124d08c2d97bea4066f90600090a256fea26469706673582212209736ced03e22d9e72beb9e77b796de2a2452818318365d042d70c3ed3c35735764736f6c63430008140033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
