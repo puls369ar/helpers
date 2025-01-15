@@ -141,21 +141,19 @@ async function loopOverArtifacts() {
 }
 
 
+
 function generateDeployContractsScript() {
     const deployContractsPath = path.join(__dirname, "deployContracts.js");
     const scriptContent = `
 const fs = require("fs");
 const path = require("path");
-const { loopOverArtifacts } = require('./path/to/loopOverArtifacts');
 
 (async () => {
-    console.log("Generating deployment scripts for all contracts in the artifacts folder...");
-    console.log();
-    await loopOverArtifacts(); // Generates deployment scripts
+    
     console.log("Deploying Contracts");
     console.log();
 
-    const deploymentUnitsPath = path.join(__dirname, "scripts", "deploymentUnits");
+    const deploymentUnitsPath = path.join(__dirname, "deploymentUnits");
 
     // Check if deploymentUnits folder exists
     if (!fs.existsSync(deploymentUnitsPath)) {
@@ -192,7 +190,9 @@ const { loopOverArtifacts } = require('./path/to/loopOverArtifacts');
     return deployContractsPath;
 }
 
-// Generate and run the Deploy Contracts script
+console.log("Generating deployment scripts for all contracts in the artifacts folder...");
+loopOverArtifacts();
+// Generate and run the DeployContracts script
 const deployScriptPath = generateDeployContractsScript();
 console.log(`Running generated Deploy Contracts script: ${deployScriptPath}`);
 import(deployScriptPath).catch((err) => console.error("Error running the Deploy Contracts script:", err));
